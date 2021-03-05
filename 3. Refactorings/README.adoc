@@ -1,0 +1,15 @@
+= Class Exercise: Refactorings
+
+Review carefully the contents of the `student.rb` and `student_test.rb` files. One by one, perform the following refactorings as described in [FIELDS]:
+
+["lowerroman"]
+
+. Replace Magic Number with Symbolic Constant (p. 217)
+. Rename Method (p. 298)
+. Split Temporary Variable (p. 121)
+. Extract Method (p. 102)
+. Hide Method (p. 327)
+. Introduce Explaining Variable (p. 117)
+. Replace Error Code with Exception (p. 332)
+. Introduce Named Parameter (p. 142)
+. Replace Loop with Collection Closure Method (p. 133)
