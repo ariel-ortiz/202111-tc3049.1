@@ -45,11 +45,7 @@ class Student
   end
 
   def average
-    grade_sum = 0
-    @grades.each do |grade|
-      grade_sum += grade
-    end
-    grade_sum / @grades.size.to_f
+    @grades.sum / @grades.size.to_f
   end
 
 end
