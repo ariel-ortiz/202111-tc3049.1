@@ -24,13 +24,45 @@ class ArrayIterator
 end
 
 #--------------------------------------------------------------------
+# An adapter allows us to re-use our original code with minimal
+# changes.
+class EnumeratorToArrayIteratorAdapter
+
+  def initialize(enum)
+    @enum = enum
+  end
+
+  def has_next?
+    begin
+      @enum.peek
+      true
+    rescue StopIteration
+      false
+    end
+  end
+
+  def item
+    @enum.peek
+  end
+
+  def next_item
+    if has_next?
+      @enum.next
+    else
+      nil
+    end
+  end
+
+end
+
+#--------------------------------------------------------------------
 # Using external iterators to implement merge sort.
 # Taken from [OLSEN] p. 132.
 def merge(array1, array2)
   merged = []
 
-  iterator1 = ArrayIterator.new(array1)
-  iterator2 = ArrayIterator.new(array2)
+  iterator1 = EnumeratorToArrayIteratorAdapter.new(array1.to_enum)
+  iterator2 = EnumeratorToArrayIteratorAdapter.new(array2.to_enum)
 
   while (iterator1.has_next? and iterator2.has_next?)
     if iterator1.item < iterator2.item
