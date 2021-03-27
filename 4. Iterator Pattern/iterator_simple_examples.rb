@@ -66,3 +66,21 @@ puts gen2.next
 puts gen2.next
 p (gen2.take 10).drop 5
 p gen2.take_while {|e| e < 10_000}
+
+puts
+
+it = [1, 2, 3].to_enum
+while true
+  begin
+    puts  it.next
+  rescue StopIteration
+    break
+  end
+end
+
+puts
+
+it.rewind
+loop do
+  puts it.next
+end
