@@ -1,0 +1,9 @@
+{
+  "version": "2.0",
+  "rawPath": "wtf",
+  "requestContext": {
+      "http": {
+          "method": "WTF"
+      }
+  }
+}
