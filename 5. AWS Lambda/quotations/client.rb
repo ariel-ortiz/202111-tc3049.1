@@ -1,7 +1,8 @@
 require 'json'
 require 'faraday'
 
-URL = 'https://2tmctatied.execute-api.us-west-2.amazonaws.com/default/quotations'
+# Replace the following URL with the corresponding API gateway endpoint 
+URL = 'https://something.amazonaws.com/default/quotations'
 
 connection = Faraday.new(url: URL)
 response = connection.get do |request|
