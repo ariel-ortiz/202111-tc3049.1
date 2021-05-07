@@ -1,0 +1,12 @@
+{
+    "rawPath": "/default/quotations",
+    "queryStringParameters": {
+        "id": 1
+    },
+    "requestContext": {
+        "http": {
+            "method": "GET"
+        },
+        "domainName": "example.com"
+    }
+}
