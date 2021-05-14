@@ -1,0 +1,8 @@
+{
+  "requestContext": {
+    "http": {
+      "method": "POST"
+    }
+  },
+  "body": "{ \"Author\": \"Michael Crichton\", \"Title\": \"Jurassic Park\", \"Year\": 1990}"
+}
