@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo</title>
+  </head>
+  <body>
+    <img src="/noticias.png" />
+    <h1>Ejemplo</h1>
+    <p>
+      <em>1 + 1 =</em> <strong><%= 1 + 1 %></strong>
+    </p>
+    <p>
+      <%= @mensaje %>
+    </p>
+    <p>
+      <ul>
+        <% @info.each do |estacion| %>
+          <li><%= estacion %></li>
+        <% end %>
+      </ul>
+    </p>
+  </body>
+</html>
